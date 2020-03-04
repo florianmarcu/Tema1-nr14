@@ -2,8 +2,8 @@
 using namespace std;
 
 // afiseza intregul polinom
-ostream& operator<<(ostream& output, Polinom& P) {
-	Polinom* p = &P;
+ostream& operator<<(ostream& output, const Polinom& P) {
+	const Polinom* p = &P;
 	while (p) {
 		if (p != &P)
 			output << "+ ";
@@ -17,9 +17,7 @@ istream& operator>>(istream& input, Polinom& P) {
 	double coef;
 	int exp;
 	input >> coef >> exp;
-	cout << P.exp << " " << P.coef;
-	if (P.exp == P.coef == 0) {
-		
+	if (P.exp == 0 and P.coef == 0) {
 		P.exp = exp;
 		P.coef = coef;
 	}

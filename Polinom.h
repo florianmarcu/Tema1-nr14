@@ -15,6 +15,6 @@ public:
 	Polinom& operator+(Polinom&);
 	Polinom& operator-(Polinom&);
 	Polinom& operator*(Polinom&);
-	friend ostream& operator<<(ostream&, Polinom&);//TODO
-	friend istream& operator>>(istream&, Polinom&);//TODO
+	friend ostream& operator<<(ostream&, const Polinom&);
+	friend istream& operator>>(istream&, Polinom&);
 };
